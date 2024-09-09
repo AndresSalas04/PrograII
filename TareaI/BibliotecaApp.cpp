@@ -259,7 +259,7 @@ class GUI{
 
 void GUI::MenuPrincipal(){
     while(true){
-        system("cls"); // clear en Unix
+        cout << "======" << endl; // clear en Unix
         cout<<"Sistema de Prestamo"<<endl;
         cout<<"1. Libros"<<endl;
         cout<<"2. Estudiantes"<<endl;
@@ -292,7 +292,7 @@ void GUI::MenuPrincipal(){
 
 void GUI::MenuLibros(){
     while(true){
-        system("cls");
+        cout << "======" << endl;
         cout<<"Sistema de Prestamo - Libros"<<endl;
         cout<<"1. Ingresar Libro"<<endl;
         cout<<"2. Mostrar Libros"<<endl;
@@ -329,11 +329,11 @@ void GUI::IngresarLibro(){
     bool respuesta = Controlador::IngresarLibro(titulo, autor, anyo);
     
     cout<<"Resultado del ingreso: "<<respuesta<<endl;
-    system("pause");
+    cout << "======" << endl;
 }
 
 void GUI::MostrarLibros(){
-    system("cls");
+    cout << "======" << endl;
     for(int i = 0; i < Controlador::indiceLibros; i++){
         Libro c = Controlador::libros[i];
         cout<<"Codigo: "<<c.codigo;
@@ -341,12 +341,12 @@ void GUI::MostrarLibros(){
         cout<<", autor: "<<c.autor;
         cout<<", anyo: "<<c.anyo<<endl;
     }
-    system("pause");
+    cout << "======" << endl;
 }
 
 void GUI::MenuEstudiantes(){
     while(true){
-        system("cls");
+        cout << "======" << endl;
         cout<<"Sistema de Prestamo - Estudiantes"<<endl;
         cout<<"1. Ingresar Estudiante"<<endl;
         cout<<"2. Mostrar Estudiantes"<<endl;
@@ -382,11 +382,11 @@ void GUI::IngresarEstudiante(){
     bool respuesta = Controlador::IngresarEstudiante(nombre, apellidos, correo);
     
     cout<<"Resultado del ingreso: "<<respuesta<<endl;
-    system("pause");
+    cout << "======" << endl;
 }
 
 void GUI::MostrarEstudiantes(){
-    system("cls");
+    cout << "======" << endl;
     for(int i = 0; i < Controlador::indiceEstudiantes; i++){
         Estudiante e = Controlador::estudiantes[i];
         cout<<"Carnet: "<<e.carnet;
@@ -394,12 +394,12 @@ void GUI::MostrarEstudiantes(){
         cout<<", apellidos: "<<e.apellidos;
         cout<<", correo: "<<e.correo<<endl;
     }
-    system("pause");
+    cout << "======" << endl;
 }
 
 void GUI::MenuPrestamos(){
     while(true){
-        system("cls");
+        cout << "======" << endl;
         cout<<"Sistema de Prestamo - Prestamos"<<endl;
         cout<<"1. Registrar Prestamo"<<endl;
         cout<<"2. Mostrar Prestamos"<<endl;
@@ -434,11 +434,11 @@ void GUI::RegistrarPrestamo(){
     bool respuesta = Controlador::RegistrarPrestamo(codLibro, carnetEst);
     
     cout<<"Resultado del registro: "<<respuesta<<endl;
-    system("pause");
+    cout << "======" << endl;
 }
 
 void GUI::MostrarPrestamos(){
-    system("cls");
+    cout << "======" << endl;
     for(int i = 0; i < Controlador::indicePrestamos; i++){
         Prestamo p = Controlador::prestamos[i];
         cout<<"Codigo Libro: "<<p.codLibro;
@@ -446,12 +446,12 @@ void GUI::MostrarPrestamos(){
         cout<<", fecha prestamo: "<<p.fechaPrestamo;
         cout<<", estado prestamo: "<<p.estadoPrestamo<<endl;
     }
-    system("pause");
+    cout << "======" << endl;
 }
 
 void GUI::MenuReportes(){
     while(true){
-        system("cls");
+        cout << "======" << endl;
         cout<<"Sistema de Prestamo - Reportes"<<endl;
         cout<<"1. Estudiante mas fiel"<<endl;
         cout<<"2. Libro mas prestado"<<endl;
@@ -474,7 +474,7 @@ void GUI::MenuReportes(){
 }
 
 void GUI::EstudianteMasFiel(){
-    system("cls");
+    cout << "======" << endl;
     Estudiante e = Controlador::EstudianteMasFiel();
     
     cout<<"Carnet: "<<e.carnet;
@@ -482,11 +482,11 @@ void GUI::EstudianteMasFiel(){
     cout<<", apellidos: "<<e.apellidos;
     cout<<", correo: "<<e.correo<<endl;
         
-    system("pause");
+    cout << "======" << endl;
 }
 
 void GUI::LibroMasPrestado(){
-    system("cls");
+    cout << "======" << endl;
     Libro l = Controlador::LibroMasPrestado();
 
     cout<<"Codigo: "<<l.codigo;
@@ -494,7 +494,7 @@ void GUI::LibroMasPrestado(){
     cout<<", Autor: "<<l.autor;
     cout<<", Año: "<<l.anyo;
 
-    system("pause");
+    cout << "======" << endl;
 }
 
 int main(){ 
